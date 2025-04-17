@@ -1,15 +1,17 @@
 public class JogoDaVelha {
-    protected static final int X = 1, O = -1;
+    protected static final int X = 1, O = -2;
     protected static final int VAZIO = 0;
-    protected int tabuleiro[][] = new int[3][3];
+    protected int tabuleiro[][] = new int[4][5];
     protected int jogador;
 
     public JogoDaVelha() {
         limpaTabuleiro();
     }
 
+    
+
     public void limpaTabuleiro() {
-        for(int i = 0;i<3;i++) {
+        for(int i = 0;i<5;i++) {
             for (int j=0; j<3; j++) {
                 tabuleiro[i][j]=VAZIO;
             }
@@ -42,7 +44,7 @@ public class JogoDaVelha {
          * nas posições corretas.
          */
         String retorno = "";
-        for (int i=0; i<3;i++){
+        for (int i=0; i<6;i++){
             for (int j=0; j<3; j++){
                 if(tabuleiro[i][j]==X) {
                     retorno += ("X");
@@ -54,6 +56,7 @@ public class JogoDaVelha {
                 if (j<2){
                     retorno += ("|");
                 }
+            
             }
             //System.out.println();
             if (i<2){
